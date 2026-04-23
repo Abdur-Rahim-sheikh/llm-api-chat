@@ -21,11 +21,16 @@ Use this local and lightweight repo to utilize it.
 git clone https://github.com/Abdur-Rahim-sheikh/llm-api-chat.git
 ```
 
-2. Install and run
+2. Install and run either with `npm` or `docker compose`
    - ```bash
      cd llm-api-chat
      npm install
      npm run dev
+     ```
+
+   - ```bash
+      cd llm-api-chat
+      docker compose up
      ```
 
 3. Accessing it in browser, visit `localhost:3000`
