@@ -1,13 +1,13 @@
 // src/app/api/chat/route.ts
-// YOU IMPLEMENT THIS (Step 4)
+// This Next.js Route Handler runs on the SERVER.
+// The user's API key is sent as a header and used here — it never touches the browser.
 //
-// This is a Next.js Route Handler. It runs on the SERVER — never exposed to browser.
-// This is where you safely use the API keys (they never leave the server).
-//
-// HOW IT WORKS:
-// - Frontend sends POST { messages, provider, model, conversation_id }
-// - This route picks the right LLM, calls it, returns the response + cost data
-//
+// YOU IMPLEMENT THIS (the last big step):
+// 1. npm install openai @google/generative-ai
+// 2. Fill in src/lib/openai.ts  →  callOpenAI()
+// 3. Fill in src/lib/gemini.ts  →  callGemini()
+// 4. Uncomment the code below
+
 // import { NextRequest, NextResponse } from "next/server";
 // import { callOpenAI } from "@/lib/openai";
 // import { callGemini } from "@/lib/gemini";
@@ -18,18 +18,15 @@
 //     const body: ChatRequest = await req.json();
 //     const { messages, provider, model } = body;
 //
-//     // Get API key from request headers (sent by the frontend)
 //     const apiKey = req.headers.get("x-api-key") ?? "";
 //     if (!apiKey) {
 //       return NextResponse.json({ error: "No API key provided" }, { status: 401 });
 //     }
 //
-//     let result;
-//     if (provider === "openai") {
-//       result = await callOpenAI(messages, model, apiKey);
-//     } else {
-//       result = await callGemini(messages, model, apiKey);
-//     }
+//     const result =
+//       provider === "openai"
+//         ? await callOpenAI(messages, model, apiKey)
+//         : await callGemini(messages, model, apiKey);
 //
 //     return NextResponse.json(result);
 //   } catch (error: any) {
