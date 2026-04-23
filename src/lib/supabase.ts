@@ -8,12 +8,12 @@
 //    NEXT_PUBLIC_SUPABASE_ANON_KEY=your_anon_key
 // 3. Uncomment the code below
 
-// import { createClient } from "@supabase/supabase-js";
+import { createClient } from "@supabase/supabase-js";
 //
-// const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL!;
-// const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!;
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL!;
+const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!;
 //
-// export const supabase = createClient(supabaseUrl, supabaseAnonKey);
+export const supabase = createClient(supabaseUrl, supabaseAnonKey);
 
 // Temporary stub so the app compiles before you set up Supabase
-export const supabase = null as any;
+// export const supabase = null as any;
