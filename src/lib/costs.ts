@@ -5,14 +5,13 @@ export const MODEL_PRICING: Record<
 	{ input_per_1m: number; output_per_1m: number }
 > = {
 	// OpenAI
-	"gpt-4o": { input_per_1m: 2.5, output_per_1m: 10.0 },
-	"gpt-4o-mini": { input_per_1m: 0.15, output_per_1m: 0.6 },
-	"gpt-4-turbo": { input_per_1m: 10.0, output_per_1m: 30.0 },
-	"gpt-3.5-turbo": { input_per_1m: 0.5, output_per_1m: 1.5 },
+	"gpt-5.2": { input_per_1m: 1.75, output_per_1m: 14.0 },
+	"gpt-5-mini": { input_per_1m: 0.25, output_per_1m: 2.0 },
+	"gpt-5-nano": { input_per_1m: 0.05, output_per_1m: 0.4 },
 	// Gemini
-	"gemini-1.5-pro": { input_per_1m: 1.25, output_per_1m: 5.0 },
-	"gemini-1.5-flash": { input_per_1m: 0.075, output_per_1m: 0.3 },
-	"gemini-2.0-flash": { input_per_1m: 0.1, output_per_1m: 0.4 },
+	"gemini-3.1-pro-preview": { input_per_1m: 2.0, output_per_1m: 12.0 },
+	"gemini-3.1-flash-lite-preview": { input_per_1m: 0.25, output_per_1m: 1.5 },
+	"gemini-2.5-flash-lite": { input_per_1m: 0.1, output_per_1m: 0.4 },
 };
 
 export const AVAILABLE_MODELS: Record<
@@ -20,15 +19,14 @@ export const AVAILABLE_MODELS: Record<
 	{ id: string; label: string }[]
 > = {
 	openai: [
-		{ id: "gpt-4o", label: "GPT-4o" },
-		{ id: "gpt-4o-mini", label: "GPT-4o Mini (cheap)" },
-		{ id: "gpt-4-turbo", label: "GPT-4 Turbo" },
-		{ id: "gpt-3.5-turbo", label: "GPT-3.5 Turbo (cheapest)" },
+		{ id: "gpt-5.2", label: "GPT-5.2 (premium)" },
+		{ id: "gpt-5-mini", label: "GPT-5 Mini" },
+		{ id: "gpt-5-nano", label: "GPT-5 Nano (cheapest)" },
 	],
 	gemini: [
-		{ id: "gemini-2.0-flash", label: "Gemini 2.0 Flash" },
-		{ id: "gemini-1.5-pro", label: "Gemini 1.5 Pro" },
-		{ id: "gemini-1.5-flash", label: "Gemini 1.5 Flash (cheap)" },
+		{ id: "gemini-3.1-pro-preview", label: "Gemini 3.1 Pro (Premium)" },
+		{ id: "gemini-3.1-flash-lite-preview", label: "Gemini 3.1 Flash Lite" },
+		{ id: "gemini-2.5-flash-lite", label: "Gemini 2.5 Flash Lite (cheap)" },
 	],
 };
 
